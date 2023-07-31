@@ -1,0 +1,9 @@
+
+function statement
+function expression
+function declaration
+anonymous func
+named function expression
+differnt b/w parameter and arguments?
+what are firstClassFunction? 
+arrow functions

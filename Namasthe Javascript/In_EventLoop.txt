@@ -1,0 +1,51 @@
+>JavaScipt is a synchronous single threaded  language.
+>It has only one has call stack which perform one thing at a time
+>This call stack is  present inside the js engine.
+>All code are executed in the call stack
+
+---------------
+> We have a browser.it has js engine along with timer,url type,localstorage,bluetooth,location
+ and many super feautures.
+> Js engine has call stack which executes all our js code.suppose if the code requires to access the
+things outside the js engine like timer,db or any.how to do it?
+    >>>>To access we need web APIs./web environment
+> Web apis are settimeout,fetch,dom api,localstorage ,location and also console.log and many more
+> Web api are not part of JavaScipt.it is the part of browser.
+> To access the web api's inside our js engine or call stack. we need to access it thorugh a global 
+object/scope called window. that means browser gives access us to allow those webapi using window
+ object.
+like window.settimeout... since its a global object we dont need to use window keyword.we canuse like
+settimeout().
+
+example
+clg(start)
+settimeout(clg('callback'),5000)
+clg(end)
+    >when code runs the globalexec context is created and runs clg(start) at line 1.
+    >then move to line 2 and saw it is callbackfn of timer,so it push this fun to web api place 
+    and attach a timer of 5000 ms.
+    >in the mean time , js executes last line clg(end) and gec is empty. 
+    >after 5 sec passed,that callbackfn in webapi place move to the callback queue.
+    >then eventloop comes. its duty is to moniter cb queue and callstack.if it saw any program and
+     push it to call stack immediately.
+    >so it saw cb func and tooks it and  push it to call stack. now it executes 
+    and print callback in console.
+>this is how it works.
+but fetch works littlebit differently than other api's
+
+fetch resolves promises right.
+lets assume this func
+    clg(start)
+    settimeout(clg('callback'),5000)
+    fetch().then(func(){clg(cbnetflix)})
+    clg(end)
+>when it comes to line 3, fetch's callback move to web environment,then when the fetch resolves promise fastly,
+>then here microtask queue made an entry, 
+    >microtask queue is only allocated for promises and mutation observer.
+    >it has highest priority than callback queue.so the event loop push microtask queue's task first ,then only
+    it executes callback stacks.
+>then, eventloop tooks mc task and push to callstack aftr the mc queue is empty,event loop passes 
+call back tasks.
+>>suppose mctask creates a new mctask itself again and again, then the callback'task might not get a
+chance to run.this is known as starvation.
+

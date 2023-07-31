@@ -1,0 +1,29 @@
+Every thing in Javascript happens inside an Execution context.
+
+Execution context is like a big box.
+
+It has two components .
+1. Memory component or variable component or Memory creation phase-(all varibales are contained here as key value pair )
+2. Code components or thread of execution  or Code execution phase. here, codes are run oneline at a time.
+
+Javascript is a synchronous single threaded language. means it only goes to next line only current line is executed.
+
+--------------------------
+
+When you run a program ,a beautiful execution context is created.
+
+In Memory creation phase, all varibale have stored as undefined and for functions,whole functions are stored as it is.
+In code execution phase,all code are executed after memory allocation.
+here at first,it stores values for all variables.
+But for function invokation, a whole new execution context is created
+
+Call stack maintains the order of execution of execution contexts.
+
+call stack is also known as
+1.execution context stack
+2.program stack
+3.control stack
+4.Runtime stack
+5.Machine  stack
+
+

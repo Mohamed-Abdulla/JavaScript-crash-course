@@ -1,0 +1,17 @@
+oops is  the style of programming that centered arrond objects rather than functions.
+
+Four pillars of oops
+    Encapsulation
+    Abstraction
+    Inheritance
+    Polymorphism
+
+Before object programming there is procedural programming which based on func.
+When there a program is big, there could be a lot of func.which may mess.
+This is where oops came in solve the problem.it takess func and varibale and forms like a unit
+called object is known  as Encapsulation. we call varibale as property and functions as methods.
+
+ex:car
+in car-object
+property-make ,model,color
+methods-start(),stop(),move()

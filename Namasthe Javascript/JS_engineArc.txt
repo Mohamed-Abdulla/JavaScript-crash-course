@@ -1,0 +1,34 @@
+Js engine is piece of code which converts our js code in to machine code.it is not hardware  machine.
+
+>What happens inside JavaScipt engine?
+>when we write code it goes in to 3 stages.
+        PARSING
+        COMPILATION
+        EXECUTION
+    >PARSING
+        1.it  first breaks each piece of code in to tokens
+        2. then the syntax parser creates AST means Abstract Syntax Tree.then pass this AST to 
+    >COMPILATION
+        COMPILATION and EXECUTION moves handbyhand
+        It has JIT compilation(Interpretter and Compilers )
+        when AST came from parsing it moves to Interpretter at the same time Interpretter communicates
+        with Compilers and also comiles as much it can .then it  moves to EXECUTION.
+
+    >EXECUTION 
+        It recieved code from COMPILATION part.
+        It has MemoryHeap and callstack.
+           > MemoryHeap is the place where all memory stored and it is constantly sync with a call stack,
+            garbabe collector and many more.
+           > Call Stack is the place where the final code is run
+
+Interpretter & Compilers
+    Interpretter runs code line by line it doesnot know what next line before.
+        Adv- code is fast becos it doesnot wait for Compiles.
+    Compilers compiles the entire code and created a optimized version of code.then runs.
+        Adv- code is efficiency.
+
+Is JS Interpretted or Compiled language?
+    it can acts as both depend on JS engine.
+    when js is created initially,it was supposed as Interpretted lang .bcoz browsers cant wait for
+    compilation.but now it act as both .that acting as Interpretted along with Compiled is known as
+    JIT compilation(Just In Time COMPILATION)

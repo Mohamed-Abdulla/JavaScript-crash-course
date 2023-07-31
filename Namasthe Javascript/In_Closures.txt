@@ -1,0 +1,45 @@
+x()() .. this means call main fun and also nested function
+1.what is closure?
+a function bundled along with it lexical enverionment forms a closure
+in every fun in js has a reference  to access its parent enverionment
+
+--Advantage of closure--
+it is very useful,most beautiful part of js
+used in module pattern,function currying
+used in higher order function like memoize,ones
+also helps  in data hiding and encapsulation
+
+
+**data hiding and encapsulation
+>if we have varible,and we want to have some data privacy over it,like other func cant acces to that particular variable
+example->
+counter example
+
+disadvantages of closure
+>over consumption of memory,
+
+
+Garbage Collector?
+Garbage Collector is program in the browser and js engine,which do like freesup and utilize memory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
